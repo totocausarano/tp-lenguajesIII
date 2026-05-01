@@ -54,10 +54,11 @@ function tarjetas (usuarios){
         let edadT = document.createElement('p')
         edadT.textContent = element.edad
         let imagen = document.createElement('img')
-        imagen.src = elements.foto
+        imagen.src = element.foto
         div.appendChild(nombreT)
         div.appendChild(edadT)
         div.appendChild(imagen)
         contenedor.appendChild(div)
     });
 }
+tarjetas(usuarios)
