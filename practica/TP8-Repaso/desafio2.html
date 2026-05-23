@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafío 2 — Conversor de Unidades</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f8f9fa; }
+    .header-box {
+      background: linear-gradient(135deg, #6610f2, #4b0082);
+      color: white;
+      border-radius: 0 0 1rem 1rem;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-box text-center">
+    <h1 class="fw-bold mb-1"><i class="bi bi-arrow-left-right me-2"></i>Conversor de Unidades</h1>
+    <p class="mb-0 opacity-75">Desafío 2 — Lenguajes III · 2026</p>
+  </div>
+
+  <div class="container" style="max-width: 600px;">
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-purple text-white fw-semibold" style="background-color: #6610f2;">
+        <i class="bi bi-gear me-2"></i>Configurar conversión
+      </div>
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-12">
+            <label for="tipoConversion" class="form-label fw-semibold">Tipo de conversión</label>
+            <select id="tipoConversion" class="form-select">
+              <option value="1">Kilómetros → Millas</option>
+              <option value="2">Millas → Kilómetros</option>
+              <option value="3">Kilogramos → Libras</option>
+              <option value="4">Libras → Kilogramos</option>
+              <option value="5">Celsius → Fahrenheit</option>
+              <option value="6">Fahrenheit → Celsius</option>
+              <option value="7">Metros → Pies</option>
+            </select>
+          </div>
+          <div class="col-md-8">
+            <label for="valor" class="form-label fw-semibold">Valor a convertir</label>
+            <input type="number" id="valor" class="form-control" placeholder="Ej: 100" step="any">
+          </div>
+          <div class="col-md-4 d-flex align-items-end">
+            <button class="btn btn-primary w-100" style="background-color: #6610f2; border-color: #6610f2;" onclick="convertir()">
+              Convertir
+            </button>
+          </div>
+        </div>
+        <div id="error" class="mt-3"></div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-success text-white fw-semibold">
+        <i class="bi bi-check-circle me-2"></i>Resultado
+      </div>
+      <div class="card-body">
+        <div id="resultado" class="text-muted fst-italic">
+          Aún no se han realizado conversiones.
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-5">
+      <div class="card-header bg-secondary text-white fw-semibold">
+        <i class="bi bi-clock-history me-2"></i>Historial de conversiones
+      </div>
+      <div class="card-body p-0">
+        <ul id="listaHistorial" class="list-group list-group-flush">
+          <li class="list-group-item text-muted fst-italic">El historial está vacío.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="desafio2.js"></script>
+</body>
+</html>
