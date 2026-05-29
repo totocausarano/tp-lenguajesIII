@@ -1,0 +1,21 @@
+.fondo-pagina{
+    background-color: white;
+}
+
+.exito-texto {
+    color: green;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+}
+.error-texto {
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+
+}
+.preguntas-progresivas {
+    margin-top: 15px;
+    text-align: center;
+}
