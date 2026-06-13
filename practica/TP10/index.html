@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - La Gran Alianza de Aventureros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                
+                <div class="card shadow">
+                    <div class="card-header bg-dark text-white text-center py-3">
+                        <h1 class="h4 mb-0">Registro del Aventurero</h1>
+                    </div>
+                    <div class="card-body p-4">
+
+                        <form id="formulario-aventura" onsubmit="return false;">
+                            
+                            <div id="paso-1" class="paso">
+                                <label for="p1-nombre" class="form-label fw-bold">¿Cuál es el nombre de tu personaje?</label>
+                                <input type="text" id="p1-nombre" class="form-control">
+                                <div id="error-1" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-2" class="paso oculto">
+                                <label for="p2-raza" class="form-label fw-bold">¿Cuál es tu raza?</label>
+                                <select id="p2-raza" class="form-select">
+                                    <option value="">-- Selecciona una raza --</option>
+                                    <option value="Humano">Humano</option>
+                                    <option value="Elfo">Elfo</option>
+                                    <option value="Enano">Enano</option>
+                                    <option value="Orco">Orco</option>
+                                </select>
+                                <div id="error-2" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-3" class="paso oculto">
+                                <label for="p3-clase" class="form-label fw-bold">¿Cuál es tu clase?</label>
+                                <select id="p3-clase" class="form-select">
+                                    <option value="">-- Selecciona una clase --</option>
+                                    <option value="Guerrero">Guerrero</option>
+                                    <option value="Mago">Mago</option>
+                                    <option value="Arquero">Arquero</option>
+                                    <option value="Sanador">Sanador</option>
+                                </select>
+                                <div id="error-3" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-4" class="paso oculto">
+                                <label for="p4-reino" class="form-label fw-bold">¿Cuál es el nombre de tu reino de origen?</label>
+                                <input type="text" id="p4-reino" class="form-control">
+                                <div id="error-4" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-5" class="paso oculto">
+                                <label for="p5-arma" class="form-label fw-bold">¿Cuál es el nombre de tu arma principal?</label>
+                                <input type="text" id="p5-arma" class="form-control">
+                                <div id="error-5" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-6" class="paso oculto">
+                                <label for="p6-registro" class="form-label fw-bold">¿Cuál es tu número de registro de aventurero?</label>
+                                <input type="text" id="p6-registro" class="form-control">
+                                <div id="error-6" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-7" class="paso oculto">
+                                <label for="p7-vida" class="form-label fw-bold">¿Cuántos puntos de vida tenés?</label>
+                                <input type="text" id="p7-vida" class="form-control">
+                                <div id="error-7" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-8" class="paso oculto">
+                                <label for="p8-batallas" class="form-label fw-bold">¿Cuántas batallas ganaste?</label>
+                                <input type="text" id="p8-batallas" class="form-control">
+                                <div id="error-8" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-9" class="paso oculto">
+                                <label for="p9-nacimiento" class="form-label fw-bold">¿Cuándo nació tu personaje?</label>
+                                <input type="date" id="p9-nacimiento" class="form-control">
+                                <div id="error-9" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="paso-10" class="paso oculto">
+                                <label for="p10-aventura" class="form-label fw-bold">¿Cuándo comenzaste tu aventura?</label>
+                                <input type="date" id="p10-aventura" class="form-control">
+                                <div id="error-10" class="error-msg text-danger small mt-1"></div>
+                            </div>
+
+                            <div id="controles" class="d-flex justify-content-between mt-4">
+                                <button type="button" id="btn-retroceder" class="btn btn-secondary" disabled>Retroceder</button>
+                                <div>
+                                    <button type="button" id="btn-reiniciar" class="btn btn-outline-danger me-2">Reiniciar</button>
+                                    <button type="button" id="btn-siguiente" class="btn btn-primary">Siguiente</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div id="cartel-exito" class="alert alert-success mt-4 oculto text-center fw-bold" role="alert"></div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.oculto {
+    display: none !important;
+}
+
+.error-msg {
+    height: 20px;
+}
+
+.borde-gris {
+    border: 2px solid grey !important;
+}
+
+.borde-rojo {
+    border: 2px solid red !important;
+}
+
+.borde-verde {
+    border: 2px solid green !important;
+}
